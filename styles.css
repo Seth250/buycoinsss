@@ -14,6 +14,16 @@
 
 body {
   font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
 }
 
 svg:not(:root) {
@@ -28,8 +38,6 @@ svg:not(:root) {
 .page-header {
   background: #24292E;
   padding: 1.075em 2.25em;
-  font-size: 14px;
-  line-height: 1.5;
   color: rgba(255, 255, 255, 0.7);
   display: -webkit-box;
   display: -moz-box;
@@ -50,6 +58,109 @@ svg:not(:root) {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 1.14em;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.page-header__link {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.page-header__link:hover, .page-header__link:focus {
+  color: inherit;
+}
+
+.page-header__search {
+  position: relative;
+  max-width: 272px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+  -webkit-transition-property: max-width, padding-bottom, padding-top;
+  transition-property: max-width, padding-bottom, padding-top;
+}
+
+.page-header__search-form {
+  display: block;
+}
+
+.page-header__search-form label {
+  min-height: 28px;
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  background-color: #24292e;
+  font-size: inherit;
+  position: relative;
+  line-height: 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  border: 1px solid #444d56;
+  border-radius: 0.43rem;
+  background-repeat: no-repeat;
+  outline: none;
+  background-position: right 0.5rem center;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.page-header__search-form label:focus-within {
+  outline: inherit;
+}
+
+.page-header__search-input {
+  min-height: inherit;
+  color: inherit;
+  width: 100%;
+  background: none;
+  border: 0;
+  display: table-cell;
+  font-size: inherit;
+  line-height: inherit;
+  -webkit-box-shadow: inherit;
+          box-shadow: inherit;
+  padding: 5px 12px;
+}
+
+.page-header__search-input::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.page-header__search-input::-moz-placeholder {
+  color: inherit;
+}
+
+.page-header__search-input:-ms-input-placeholder {
+  color: inherit;
+}
+
+.page-header__search-input::-ms-input-placeholder {
+  color: inherit;
+}
+
+.page-header__search-input::placeholder {
+  color: inherit;
+}
+
+.page-header__search-input:focus {
+  outline: none;
+}
+
+.page-header__search-slash {
+  margin-right: 8px;
+  border-style: none;
 }
 
 .page-header a {
