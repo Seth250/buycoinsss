@@ -58,7 +58,7 @@ svg:not(:root) {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 1.14em;
+  margin-right: 16px;
   -ms-flex-item-align: stretch;
       align-self: stretch;
 }
@@ -74,7 +74,7 @@ svg:not(:root) {
 
 .page-header__search {
   position: relative;
-  max-width: 272px;
+  min-width: 272px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
   -webkit-transition-property: max-width, padding-bottom, padding-top;
@@ -91,9 +91,9 @@ svg:not(:root) {
   max-width: 100%;
   vertical-align: middle;
   background-color: #24292e;
-  font-size: inherit;
+  font-weight: 400;
   position: relative;
-  line-height: 20px;
+  line-height: 18px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -106,9 +106,8 @@ svg:not(:root) {
      -moz-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #fff;
   border: 1px solid #444d56;
-  border-radius: 0.43rem;
+  border-radius: 6px;
   background-repeat: no-repeat;
   outline: none;
   background-position: right 0.5rem center;
@@ -131,7 +130,7 @@ svg:not(:root) {
   line-height: inherit;
   -webkit-box-shadow: inherit;
           box-shadow: inherit;
-  padding: 5px 12px;
+  padding: 5px 12.5px;
 }
 
 .page-header__search-input::-webkit-input-placeholder {
