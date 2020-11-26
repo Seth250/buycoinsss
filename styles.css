@@ -230,3 +230,12 @@ details summary {
   border-bottom: 0 solid transparent;
   border-left: 4px solid transparent;
 }
+
+.profile-avatar {
+  border-radius: 50%;
+  border-style: none;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+  vertical-align: middle;
+}
