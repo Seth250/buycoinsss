@@ -28,6 +28,7 @@ a {
 
 button, input, select, textarea {
   font-family: inherit;
+  line-height: inherit;
 }
 
 svg:not(:root) {
@@ -41,7 +42,7 @@ svg:not(:root) {
 
 .page-header {
   background: #24292E;
-  padding: 1.075em 2.25em;
+  padding: 1.075em 1.15em 1.075em 2.25em;
   color: rgba(255, 255, 255, 0.7);
   display: -webkit-box;
   display: -moz-box;
@@ -94,7 +95,6 @@ svg:not(:root) {
 .page-header__search-form label {
   min-height: 28px;
   width: 100%;
-  max-width: 100%;
   vertical-align: middle;
   background-color: #24292e;
   font-weight: 400;
@@ -186,6 +186,10 @@ svg:not(:root) {
   fill: currentColor;
 }
 
+.item-mobile {
+  display: none;
+}
+
 .item-full {
   -webkit-box-flex: 1;
      -moz-box-flex: 1;
@@ -193,11 +197,21 @@ svg:not(:root) {
           flex: auto;
 }
 
+.btn-link {
+  display: inline-block;
+  background-color: initial;
+  border: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .nav-link {
   margin-right: 16px;
 }
 
-.github-logo {
+.github-icon {
   vertical-align: middle;
 }
 
@@ -238,4 +252,68 @@ details summary {
   overflow: hidden;
   line-height: 1;
   vertical-align: middle;
+}
+
+@media only screen and (max-width: 768px) {
+  .page-header {
+    padding-left: 1.7em;
+    padding-right: 0.6em;
+  }
+  .inline-elem {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-header {
+    padding: 1.15em 0.2em 1.15em 1.15em;
+    position: relative;
+  }
+  .page-header__search {
+    margin-right: 0;
+    margin-bottom: 16px;
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+  }
+  .item-mobile {
+    display: inherit;
+  }
+  .item-collapse-mobile {
+    display: none;
+  }
+  .item-full {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 100%;
+    background: inherit;
+    width: 100%;
+    left: 0;
+    padding: 0 16px;
+  }
+  #notification-bar {
+    -webkit-box-ordinal-group: 3;
+       -moz-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  #github-logo {
+    -webkit-box-ordinal-group: 2;
+       -moz-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-flex: 1;
+       -moz-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    -webkit-box-pack: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
