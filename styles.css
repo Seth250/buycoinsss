@@ -178,17 +178,9 @@ svg:not(:root) {
       align-self: auto;
 }
 
-.page-header a {
-  color: #fff;
-}
-
 .page-header__icon {
   display: inline-block;
   fill: currentColor;
-}
-
-.item-show-mobile {
-  display: none;
 }
 
 .item-full {
@@ -201,15 +193,12 @@ svg:not(:root) {
 .btn-link {
   display: inline-block;
   background-color: initial;
+  font-size: inherit;
   border: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-
-.nav-link {
-  margin-right: 16px;
 }
 
 .octicon-middle {
@@ -255,6 +244,15 @@ details summary {
   vertical-align: middle;
 }
 
+@media only screen and (min-width: 600px) {
+  .item-show-mobile {
+    display: none;
+  }
+  .nav-link {
+    margin-right: 16px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .page-header {
     padding-left: 1.7em;
@@ -291,13 +289,6 @@ details summary {
   .nav-link {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding: 8px 0;
-    margin-right: 0;
-  }
-  .item-show-mobile {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
   }
   .inline-elem {
     display: inline;
@@ -317,7 +308,12 @@ details summary {
     background: inherit;
     width: 100%;
     left: 0;
-    padding: 0 16px;
+    padding: 0 16px 16px 16px;
+  }
+  #logout-btn {
+    padding-left: 2px;
+    width: 100%;
+    text-align: left;
   }
   #notification-bar {
     -webkit-box-ordinal-group: 3;
