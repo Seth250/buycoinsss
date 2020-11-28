@@ -68,6 +68,7 @@ svg:not(:root) {
 
 .container {
   max-width: 1280px;
+  margin: 0 auto;
 }
 
 .page-header {
@@ -357,15 +358,23 @@ details summary {
   border-bottom: 1px solid #eaecef;
 }
 
-.page-main__head-item {
-  padding: 0 32px;
+.page-main__item {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 32px;
 }
 
-.page-main__head-item__col {
+.page-main__item__col-1 {
+  border: 1px solid green;
+  width: 25%;
+  padding: 0 16px;
+}
+
+.page-main__item__col-2 {
+  border: 1px solid blue;
+  width: 75%;
   padding: 0 16px;
 }
 
@@ -374,10 +383,6 @@ details summary {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .page-main__nav-item {
@@ -392,7 +397,7 @@ details summary {
   transition: border-bottom-color 0.36s ease-in;
 }
 
-.page-main__nav-item:hover .page-main__nav-item:focus {
+.page-main__nav-item:hover, .page-main__nav-item:focus {
   border-bottom-color: #d1d5da;
   outline: 1px solid transparent;
   outline-offset: -1px;
@@ -411,14 +416,12 @@ details summary {
   margin-right: 4px;
 }
 
-.col-1 {
-  border: 1px solid green;
-  width: 25%;
-}
-
-.col-2 {
-  border: 1px solid blue;
-  width: 75%;
+.page-main__body {
+  padding: 0 32px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .nav-item-active {
@@ -486,6 +489,10 @@ details summary {
   line-height: 1.25;
 }
 
+.profile-avatar-container {
+  margin-top: -32px;
+}
+
 .page-footer {
   display: -webkit-box;
   display: -moz-box;
@@ -500,7 +507,6 @@ details summary {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 16px;
-  margin: 0 auto;
 }
 
 .page-footer__content {
