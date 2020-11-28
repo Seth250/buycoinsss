@@ -225,6 +225,7 @@ svg:not(:root) {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  cursor: pointer;
 }
 
 .details-reset > summary {
@@ -367,13 +368,11 @@ details summary {
 }
 
 .page-main__item__col-1 {
-  border: 1px solid green;
   width: 25%;
   padding: 0 16px;
 }
 
 .page-main__item__col-2 {
-  border: 1px solid blue;
   width: 75%;
   padding: 0 16px;
 }
@@ -451,7 +450,7 @@ details summary {
 .profile-sticky-bar {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   width: 233px;
   word-break: break-all;
   pointer-events: none;
@@ -469,7 +468,7 @@ details summary {
   height: 48px;
   position: relative;
   top: 1px;
-  z-index: 100;
+  z-index: 110;
   display: table;
 }
 
@@ -491,6 +490,107 @@ details summary {
 
 .profile-avatar-container {
   margin-top: -32px;
+  border: 1px solid green;
+}
+
+.status-container {
+  position: relative;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.status-badge-container {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 32px;
+  margin-left: -48px;
+  font-size: 14px;
+  border: 1px solid green;
+}
+
+.status-badge-container:hover {
+  width: auto;
+  max-width: 544px;
+}
+
+.status-badge-container:hover .user-status-message-wrapper {
+  opacity: 1;
+  margin-left: 8px;
+  width: inherit;
+}
+
+.user-status {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 2em;
+  padding: 8px;
+  line-height: 1;
+}
+
+.user-status-header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+     -moz-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 12px;
+  line-height: 1.25;
+  border-radius: 50%;
+}
+
+.user-status-emoji {
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-status-message-wrapper {
+  overflow: hidden;
+  line-height: 20px;
+  opacity: 0;
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+  width: 0;
+  white-space: normal;
+}
+
+.user-status-message {
+  display: inline-block;
+  vertical-align: top;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.alt-link {
+  color: #586069;
+}
+
+.alt-link:hover {
+  color: #0366d6;
 }
 
 .page-footer {
