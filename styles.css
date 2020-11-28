@@ -22,6 +22,15 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
   display: block;
 }
 
+h1, h2 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0.45em 0;
+}
+
 a {
   color: #0367d8;
   text-decoration: none;
@@ -62,8 +71,10 @@ svg:not(:root) {
 }
 
 .avatar-user {
+  position: relative;
   border-radius: 50%;
   border-style: none;
+  z-index: 2;
 }
 
 .container {
@@ -357,6 +368,7 @@ details summary {
   position: sticky;
   top: 0;
   border-bottom: 1px solid #eaecef;
+  z-index: 0;
 }
 
 .page-main__item {
@@ -368,11 +380,13 @@ details summary {
 }
 
 .page-main__item__col-1 {
+  border: 1px solid green;
   width: 25%;
-  padding: 0 16px;
+  padding: 0 14px;
 }
 
 .page-main__item__col-2 {
+  border: 1px solid blue;
   width: 75%;
   padding: 0 16px;
 }
@@ -396,7 +410,7 @@ details summary {
   transition: border-bottom-color 0.36s ease-in;
 }
 
-.page-main__nav-item:hover, .page-main__nav-item:focus {
+.page-main__nav-item:hover:not(.nav-item-active), .page-main__nav-item:focus:not(.nav-item-active) {
   border-bottom-color: #d1d5da;
   outline: 1px solid transparent;
   outline-offset: -1px;
@@ -450,7 +464,7 @@ details summary {
 .profile-sticky-bar {
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 10;
   width: 233px;
   word-break: break-all;
   pointer-events: none;
@@ -468,7 +482,7 @@ details summary {
   height: 48px;
   position: relative;
   top: 1px;
-  z-index: 110;
+  z-index: 12;
   display: table;
 }
 
@@ -490,7 +504,6 @@ details summary {
 
 .profile-avatar-container {
   margin-top: -32px;
-  border: 1px solid green;
 }
 
 .status-container {
@@ -509,7 +522,6 @@ details summary {
   margin-bottom: 32px;
   margin-left: -48px;
   font-size: 14px;
-  border: 1px solid green;
 }
 
 .status-badge-container:hover {
@@ -585,12 +597,149 @@ details summary {
   max-width: 100%;
 }
 
+.vcard-names-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.vcard-fullname {
+  display: block;
+  font-size: 26px;
+  line-height: 1.25;
+  overflow: hidden;
+}
+
+.vcard-username {
+  display: block;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #586069;
+}
+
+.user-profile-bio {
+  overflow: hidden;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.user-info-section {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile-edit-button {
+  margin-bottom: 16px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  color: #24292E;
+  background-color: #fafbfc;
+  -webkit-box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+          box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  -webkit-transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+}
+
+.user-basic-info {
+  margin-bottom: 16px;
+}
+
+.user-basic-info span {
+  font-weight: 600;
+  color: #24292E;
+}
+
+.user-basic-info a {
+  white-space: nowrap;
+}
+
+.vcard-detail {
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 22px;
+  font-size: 14px;
+  padding-top: 4px;
+  list-style: none;
+  border: 1px solid black;
+}
+
+.vcard-detail .octicon-text-bottom {
+  margin-left: -22px;
+  width: 16px;
+  margin-top: 3px;
+  text-align: center;
+  float: left;
+}
+
+.vcard-detail a {
+  color: #24292e;
+}
+
+.user-highlights {
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 1px solid #eaecef;
+}
+
+.user-highlights-header {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.highlight-label {
+  display: inline-block;
+  padding: 0 7px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  border-radius: 2em;
+  background-color: initial;
+  border: 1px solid #e1e4e8;
+  text-transform: uppercase;
+}
+
 .alt-link {
   color: #586069;
 }
 
 .alt-link:hover {
   color: #0366d6;
+}
+
+.light-grey {
+  color: #6a737d;
 }
 
 .page-footer {
