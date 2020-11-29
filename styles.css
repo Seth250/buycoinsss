@@ -28,7 +28,12 @@ h1, h2 {
 
 h1 {
   font-size: 32px;
-  margin: 0.5em 0;
+}
+
+@media only screen and (min-width: 600px) {
+  h1 {
+    margin: 0.5em 0;
+  }
 }
 
 a {
@@ -750,6 +755,99 @@ details summary {
   text-transform: uppercase;
 }
 
+.vcard-repositories {
+  position: relative;
+}
+
+.repo-search {
+  padding: 16px 0;
+  border-bottom: 1px solid #eaecef;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.repo-search__form {
+  -webkit-box-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+}
+
+.repo-search__form > div {
+  margin-right: 16px;
+}
+
+.repo-search__input {
+  width: 100%;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #24292E;
+  vertical-align: middle;
+  border: 1px solid #e1e4e8;
+  outline: none;
+  outline-offset: -2px;
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(225, 228, 232, 0.2);
+          box-shadow: inset 0 1px 0 rgba(225, 228, 232, 0.2);
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-container .details-reset {
+  margin-right: 8px;
+}
+
+.flex-container a {
+  color: #fff;
+  background-color: #2ea44f;
+}
+
+.vcard-btn {
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  position: relative;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  color: #24292E;
+  background-color: #fafbfc;
+  -webkit-box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+          box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  -webkit-transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+}
+
+.vcard-btn > i {
+  font-style: normal;
+  font-weight: inherit;
+  opacity: 0.7;
+}
+
 .alt-link {
   color: #586069;
 }
@@ -807,7 +905,7 @@ details summary {
     margin-top: 0;
     display: block;
     width: 25%;
-    padding: 1px 22px 5px 0;
+    padding: 5px 16px 0 0;
   }
   .status-badge-container {
     position: relative;
@@ -815,11 +913,12 @@ details summary {
     width: 100%;
     margin-left: 0px;
     height: 10px;
+    margin-top: 28px;
   }
   .user-status {
     border-radius: 6px;
     width: inherit;
-    padding: 4px 8px;
+    padding: 4px 6px;
   }
   .user-status-message-wrapper {
     width: inherit;
@@ -839,7 +938,10 @@ details summary {
        -moz-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 16px;
+  }
+  .vcard-names-container {
+    padding-top: 4px;
+    padding-left: 12px;
   }
   .user-basic-info {
     -webkit-box-ordinal-group: 3;

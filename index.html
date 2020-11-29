@@ -133,7 +133,7 @@
         <div class="page-main__item__col-1">
           <div class="vcard-user">
             <div class="profile-avatar-container">
-              <a>
+              <a title="change your avatar" href="#">
                 <img alt="profile picture" class="avatar avatar-user" src="https://avatars0.githubusercontent.com/u/36954087?s=460&amp;u=0740b5dd5a850e1ddfc151dfa20f9871d0361308&amp;v=4">
               </a>
               <div class="status-container item-collapse-mobile">
@@ -239,7 +239,38 @@
             </ul>
           </div>
         </div>
-        <div class="page-main__item__col-2 item-collapse-mobile">
+        <div class="page-main__item__col-2">
+          <div class="vcard-repositories">
+            <div class="repo-search">
+              <form class="repo-search__form">
+                <div>
+                  <input type="search" placeholder="Find a repository..." class="repo-search__input" />
+                </div>
+              </form>
+              <div class="flex-container">
+                <details class="details-reset">
+                  <summary class="vcard-btn" aria-haspopup="menu" role="button">
+                    <i>Type:</i>
+                    <span>All</span>
+                    <span class="dropdown-caret"></span>
+                  </summary>
+                </details>
+                <details class="details-reset">
+                  <summary class="vcard-btn" aria-haspopup="menu" role="button">
+                    <i>Language:</i>
+                    <span>All</span>
+                    <span class="dropdown-caret"></span>
+                  </summary>
+                </details>
+                <a href="#" class="vcard-btn">
+                  <svg class="octicon-text-bottom" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+                  </svg>
+                  New
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
