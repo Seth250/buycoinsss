@@ -85,7 +85,7 @@
     <main class="page-main" role="main">
       <div class="page-main__head">
         <div class="container page-main__item">
-          <div class="page-main__item__col-1">
+          <div class="page-main__item__col-1 item-collapse-mobile">
             <div class="profile-sticky-bar">
               <div class="profile-mini-card">
                 <span class="profile-mini-avatar">
@@ -131,40 +131,60 @@
       </div>
       <div class="container page-main__item">
         <div class="page-main__item__col-1">
-          <div class="profile-avatar-container">
-            <a>
-              <img style="height:auto;" alt="profile picture" width="270" height="270" class="avatar avatar-user" src="https://avatars0.githubusercontent.com/u/36954087?s=460&amp;u=0740b5dd5a850e1ddfc151dfa20f9871d0361308&amp;v=4">
-            </a>
-            <div class="status-container">
-              <div class="status-badge-container">
-                <div class="user-status">
-                  <details class="details-reset">
-                    <summary class="btn-link alt-link" role="button">
-                      <div class="user-status-header">
-                        <div class="user-status-emoji">
-                          <svg class="octicon-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"></path>
-                          </svg>
+          <div class="vcard-user">
+            <div class="profile-avatar-container">
+              <a>
+                <img alt="profile picture" class="avatar avatar-user" src="https://avatars0.githubusercontent.com/u/36954087?s=460&amp;u=0740b5dd5a850e1ddfc151dfa20f9871d0361308&amp;v=4">
+              </a>
+              <div class="status-container item-collapse-mobile">
+                <div class="status-badge-container">
+                  <div class="user-status">
+                    <details class="details-reset">
+                      <summary class="btn-link alt-link" role="button">
+                        <div class="user-status-header">
+                          <div class="user-status-emoji">
+                            <svg class="octicon-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"></path>
+                            </svg>
+                          </div>
+                          <div class="user-status-message-wrapper">
+                            <span class="user-status-message">
+                              Set status
+                            </span>
+                          </div>
                         </div>
-                        <div class="user-status-message-wrapper">
-                          <span class="user-status-message">
-                            Set status
-                          </span>
-                        </div>
-                      </div>
-                    </summary>
-                  </details>
+                      </summary>
+                    </details>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="vcard-names-container">
+              <h1 class="vcard-names">
+                <span class="vcard-fullname">Akintayo Ayowale Seth</span>
+                <span class="vcard-username">Seth250</span>
+              </h1>
+            </div>
           </div>
-          <div class="vcard-names-container">
-            <h1 class="vcard-names">
-              <span class="vcard-fullname">Akintayo Ayowale Seth</span>
-              <span class="vcard-username">Seth250</span>
-            </h1>
-          </div>
-          <div class="user-status-container">
+          <div class="status-badge-container item-show-mobile">
+            <div class="user-status">
+              <details class="details-reset">
+                <summary class="btn-link alt-link" role="button">
+                  <div class="user-status-header">
+                    <div class="user-status-emoji">
+                      <svg class="octicon-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"></path>
+                      </svg>
+                    </div>
+                    <div class="user-status-message-wrapper">
+                      <span class="user-status-message">
+                        Set status
+                      </span>
+                    </div>
+                  </div>
+                </summary>
+              </details>
+            </div>
           </div>
           <div class="user-profile-bio">
             <span>Python/Django, JavaScript/VueJs</span>
@@ -199,7 +219,7 @@
                 </svg>
                 <a href="#">ayowaleakintayo@gmail.com</a>
               </li>
-              <li class="vcard-detail">
+              <li class="vcard-detail item-collapse-mobile">
                 <svg class="octicon-text-bottom light-grey" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.5 222.3">
                   <path d="M273.5 26.3a109.77 109.77 0 0 1-32.2 8.8 56.07 56.07 0 0 0 24.7-31 113.39 113.39 0 0 1-35.7 13.6 56.1 56.1 0 0 0-97 38.4 54 54 0 0 0 1.5 12.8A159.68 159.68 0 0 1 19.1 10.3a56.12 56.12 0 0 0 17.4 74.9 56.06 56.06 0 0 1-25.4-7v.7a56.11 56.11 0 0 0 45 55 55.65 55.65 0 0 1-14.8 2 62.39 62.39 0 0 1-10.6-1 56.24 56.24 0 0 0 52.4 39 112.87 112.87 0 0 1-69.7 24 119 119 0 0 1-13.4-.8 158.83 158.83 0 0 0 86 25.2c103.2 0 159.6-85.5 159.6-159.6 0-2.4-.1-4.9-.2-7.3a114.25 114.25 0 0 0 28.1-29.1" fill="currentColor"></path>
                 </svg>
@@ -207,7 +227,7 @@
               </li>
             </ul>
           </div>
-          <div class="user-highlights">
+          <div class="user-highlights item-collapse-mobile">
             <h2 class="user-highlights-header">Highlights</h2>
             <ul>
               <li>
@@ -219,7 +239,7 @@
             </ul>
           </div>
         </div>
-        <div class="page-main__item__col-2">
+        <div class="page-main__item__col-2 item-collapse-mobile">
         </div>
       </div>
     </main>
