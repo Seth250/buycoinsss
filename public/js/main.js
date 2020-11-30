@@ -124,7 +124,7 @@ function getRepoDateValue(dateValue){
     if ((nowMonth === dateMonth) && (nowYear === dateYear)){
         const value = (now - date) / 1000;
         if (value < 60){
-           return `${value} Seconds ago`;
+           return `${Math.round(value)} Seconds ago`;
         } else if (value < 3600){
             return `${Math.round(value / 60)} Minutes ago`;
         } else if (value < 86400){
