@@ -22,12 +22,16 @@ article, aside, details, figcaption, figure, footer, header, main, menu, nav, se
   display: block;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
   font-weight: 600;
 }
 
 h1 {
   font-size: 32px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -66,6 +70,14 @@ svg:not(:root) {
   display: inline-block;
   fill: currentColor;
   vertical-align: text-bottom;
+}
+
+.octicon-text-top {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-top;
+  color: #6a737d;
+  margin-right: 4px;
 }
 
 .avatar {
@@ -377,7 +389,8 @@ details summary {
   position: sticky;
   top: 0;
   border-bottom: 1px solid #eaecef;
-  z-index: 0;
+  z-index: 1;
+  background: #fff;
 }
 
 .page-main__item {
@@ -397,7 +410,7 @@ details summary {
 .page-main__item__col-2 {
   width: 75%;
   padding-left: 8px;
-  padding-right: 16px;
+  padding-right: 0;
 }
 
 .page-main__nav {
@@ -473,7 +486,7 @@ details summary {
 .profile-sticky-bar {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 5;
   width: 233px;
   word-break: break-all;
   pointer-events: none;
@@ -491,7 +504,7 @@ details summary {
   height: 48px;
   position: relative;
   top: 1px;
-  z-index: 12;
+  z-index: 4;
   display: table;
 }
 
@@ -796,6 +809,42 @@ details summary {
           box-shadow: inset 0 1px 0 rgba(225, 228, 232, 0.2);
 }
 
+.repo-list__item {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 24px 0;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.repo-list__item__col-1 {
+  display: inline-block;
+  width: 75%;
+}
+
+.repo-list__item__col-1 div:last-child {
+  font-size: 12px;
+  margin-top: 8px;
+  color: #586069;
+}
+
+.repo-list__item__col-1 h3 {
+  word-break: break-all;
+  margin-bottom: 4px;
+}
+
+.repo-list__item__col-2 {
+  text-align: right;
+  width: 25%;
+}
+
+.repo-list__item__col-2 .vcard-btn {
+  padding: 3px 12px;
+  font-size: 12px;
+  width: initial;
+}
+
 .flex-container {
   display: -webkit-box;
   display: -moz-box;
@@ -807,9 +856,15 @@ details summary {
   margin-right: 8px;
 }
 
-.flex-container a {
+.flex-container a,
+.flex-container a:hover,
+.flex-container a:focus {
   color: #fff;
   background-color: #2ea44f;
+}
+
+.flex-container a {
+  margin-left: 8px;
 }
 
 .vcard-btn {
@@ -842,10 +897,28 @@ details summary {
   transition-property: color, background-color, border-color;
 }
 
+.vcard-btn:hover {
+  background: #f3f4f6;
+}
+
 .vcard-btn > i {
   font-style: normal;
   font-weight: inherit;
   opacity: 0.7;
+}
+
+.repo-language-container {
+  margin-right: 16px;
+}
+
+.repo-language-color {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgba(27, 31, 35, 0.1);
+  border-radius: 50%;
 }
 
 .alt-link {
@@ -854,6 +927,10 @@ details summary {
 
 .alt-link:hover {
   color: #0366d6;
+}
+
+.repo-updated-date {
+  white-space: nowrap;
 }
 
 .light-grey {
