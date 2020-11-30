@@ -284,7 +284,7 @@ details summary {
 
 @media only screen and (min-width: 600px) {
   .item-show-mobile {
-    display: none;
+    display: none !important;
   }
   .nav-link {
     margin-right: 16px;
@@ -305,6 +305,7 @@ details summary {
   .page-header {
     padding: 1.15em 0 1.15em 1.15em;
     position: relative;
+    z-index: 10;
   }
   .page-header__search {
     margin-right: 0;
@@ -379,6 +380,10 @@ details summary {
   }
 }
 
+.responsive + .page-main {
+  margin-top: 380px;
+}
+
 .page-main {
   display: block;
 }
@@ -389,6 +394,7 @@ details summary {
   position: sticky;
   top: 0;
   border-bottom: 1px solid #eaecef;
+  display: block;
   z-index: 1;
   background: #fff;
 }
@@ -863,8 +869,12 @@ details summary {
   background-color: #2ea44f;
 }
 
-.flex-container a {
+.flex-container > a {
   margin-left: 8px;
+  -webkit-box-flex: 0;
+     -moz-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 
 .vcard-btn {
@@ -907,7 +917,7 @@ details summary {
   opacity: 0.7;
 }
 
-.repo-language-container {
+.repo-value-container {
   margin-right: 16px;
 }
 
@@ -921,16 +931,58 @@ details summary {
   border-radius: 50%;
 }
 
+.repo-description {
+  display: block;
+  padding-right: 24px;
+  margin-bottom: 8px;
+  color: #586069;
+  width: 75%;
+}
+
+.repo-topics-container {
+  height: 30px;
+  overflow: hidden;
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 12px;
+  margin: 4px 0;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.repo-updated-date {
+  white-space: nowrap;
+}
+
+.topics-tag-link {
+  margin: 0 0.125em 0.333em 0;
+  display: block;
+  font-weight: 500;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  padding: 0 10px;
+  line-height: 22px;
+  color: #0366d6;
+  background-color: #f1f8ff;
+  font-size: inherit;
+}
+
+.topics-tag-link:hover {
+  background-color: #def;
+}
+
 .alt-link {
   color: #586069;
 }
 
 .alt-link:hover {
   color: #0366d6;
-}
-
-.repo-updated-date {
-  white-space: nowrap;
 }
 
 .light-grey {
@@ -956,15 +1008,19 @@ details summary {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-       -moz-box-orient: vertical;
-       -moz-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
   }
   .page-main__item {
     padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .page-main__item__col-1, .page-main__item__col-2 {
     width: 100%;
@@ -972,8 +1028,14 @@ details summary {
   .page-main__item__col-1 {
     padding: 0 16px;
   }
-  .page-main__nav {
-    overflow-y: auto;
+  .page-main__item__col-2 {
+    padding-left: 0px;
+  }
+  .page-main__head {
+    padding-left: 8px;
+    width: 360px;
+    max-width: 100%;
+    overflow: auto;
   }
   .page-main__octicon {
     display: none;
@@ -1026,6 +1088,19 @@ details summary {
         -ms-flex-order: 2;
             order: 2;
     padding-top: 8px;
+  }
+  .repo-list__item {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .repo-search {
+    display: block;
+  }
+  .repo-search__form {
+    margin-bottom: 16px;
+  }
+  .vcard-repositories {
+    padding-left: 4px;
   }
 }
 
