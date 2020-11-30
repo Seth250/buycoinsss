@@ -7,7 +7,9 @@ const repoList = document.querySelector('.repo-list ul');
 const repoCountContainer = document.getElementById('repoCountContainer');
 
 const endpoint = 'https://api.github.com/graphql';
+
 const accessToken = atob("NzkzZmFiNDM5Zjg1YTkxNDViYTFjZTc1YjJiNjliMDU1ZDE5MTllYQ==");
+
 const headers = {
     Authorization: `Bearer ${accessToken}`
 }
