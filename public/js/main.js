@@ -4,7 +4,7 @@ const fullname = document.querySelector('.vcard-fullname');
 const usernameElements = document.querySelectorAll('.u-name');
 const bioContainer = document.querySelector('.user-profile-bio');
 const repoList = document.querySelector('.repo-list ul');
-const repoCountContainer = document.getElementById('repoCountContainer');
+const repoCountContainers = document.querySelectorAll('.repoCountContainer');
 
 const endpoint = 'https://api.github.com/graphql';
 
@@ -81,9 +81,9 @@ function updateUserInfo({ viewer }){
         }
     });
     fullname.textContent = name; // set fullname
-    usernameElements.forEach((elem) => { elem.textContent = login }); // set username in all required places
+    usernameElements.forEach((elem) => elem.appendChild(document.createTextNode(login))); // set username in all required places
     bioContainer.appendChild(createBio(bio)); // set bio
-    repoCountContainer.appendChild(createRepoCount(repositories.totalCount)); // set repos number
+    repoCountContainers.forEach((container) => container.appendChild(createRepoCount(repositories.totalCount))); // set repos count
     repositories.nodes.forEach((repoData) => addRepoListItem(repoData)) // add repos
     document.getElementById('followers').textContent = followers.totalCount;
     document.getElementById('following').textContent = following.totalCount;
