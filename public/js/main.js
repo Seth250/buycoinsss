@@ -114,26 +114,31 @@ function getRepoDateValue(dateValue){
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
     const now = new Date();
-    const nowMonth = now.getMonth();
     const nowYear = now.getFullYear();
 
     const date = new Date(dateValue);
-    const dateMonth = date.getMonth()
     const dateYear = date.getFullYear();
 
-    if ((nowMonth === dateMonth) && (nowYear === dateYear)){
-        const value = (now - date) / 1000;
+    if ((now - date) / (86400 * 1000) <= 28){
+        let value = (now - date) / 1000;
+        let unit = '';
+
         if (value < 60){
-           return `${Math.round(value)} Seconds ago`;
+            value = Math.round(value);
+            unit = 'second';
         } else if (value < 3600){
-            return `${Math.round(value / 60)} Minutes ago`;
+            value = Math.round(value / 60);
+            unit = 'minute';
         } else if (value < 86400){
-            return `${Math.round(value / 3600)} Hours ago`;
+            value = Math.round(value / 3600);
+            unit = 'hour';
         } else {
-            return `${Math.round(value / 86400)} Days ago`;
+            value = Math.round(value / 86400);
+            unit = 'day';
         }
+        return `${value} ${unit}${value !== 1 ? 's' : ''} ago`;
     } else {
-        let val = `on ${months[dateMonth]} ${date.getDate()}`;
+        let val = `on ${months[date.getMonth()]} ${date.getDate()}`;
         if (dateYear !== nowYear) val += `, ${dateYear}`;
         return val;
     }
